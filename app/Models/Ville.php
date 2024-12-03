@@ -16,3 +16,4 @@ class Ville extends Model
         return $this->hasMany(Etudiant::class);
     }
 }
+    
