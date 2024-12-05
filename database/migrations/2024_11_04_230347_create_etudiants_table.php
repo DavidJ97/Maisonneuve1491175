@@ -15,8 +15,8 @@ class CreateEtudiantsTable extends Migration
             $table->string('telephone');
             $table->string('email')->unique();
             $table->date('date_de_naissance');
-            $table->unsignedBigInteger('ville_id'); // Conserve la colonne sans ajouter la contrainte
-            // $table->foreign('ville_id')->references('id')->on('villes')->onDelete('cascade');
+            $table->foreignId('ville_id')->constrained();
+            $table->foreignId('user_id')->constrained();
             $table->timestamps();
         });
     }

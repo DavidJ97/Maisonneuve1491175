@@ -5,7 +5,7 @@
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
             <h1>Liste des étudiants</h1>
-            <a href="{{ route('etudiant.create') }}" class="btn btn-primary">Ajouter un étudiant</a>
+            
         </div>
         <div class="card-body">
             <table class="table">

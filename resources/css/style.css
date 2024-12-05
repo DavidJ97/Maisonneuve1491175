@@ -1,0 +1,57 @@
+body {
+    background: linear-gradient(-45deg, #003366, #2BB1E5, #ffffff, #87CEEB);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.navbar, .card, .footer {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(10px);
+}
+
+.logo-wave { fill: #2BB1E5; }
+
+.logo-text-reseau {
+    color: #003366;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.logo-text-m9 {
+    color: #2BB1E5;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.logo-subtitle {
+    font-size: 0.875rem;
+    color: #666;
+    display: block;
+}
+
+.btn-primary {
+    background-color: #003366 !important;
+    border-color: #003366 !important;
+}
+
+.btn-primary:hover {
+    background-color: #2BB1E5 !important;
+    border-color: #2BB1E5 !important;
+}
+
+.table {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+}   

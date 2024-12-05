@@ -1,9 +1,10 @@
 @extends('layouts.app')
-@section('titre', __('messages.new_article'))
+@section('titre', __('messages.new_document'))
+
 @section('contenu')
 <div class="card">
     <div class="card-header">
-        <h2>{{ __('messages.new_article') }}</h2>
+        <h2>{{ __('messages.new_document') }}</h2>
     </div>
     <div class="card-body">
         @if ($errors->any())
@@ -16,7 +17,7 @@
             </div>
         @endif
 
-        <form action="{{ route('articles.store') }}" method="POST">
+        <form action="{{ route('documents.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
                 <label class="form-label">{{ __('messages.title_fr') }}</label>
@@ -29,17 +30,12 @@
             </div>
 
             <div class="mb-3">
-                <label class="form-label">{{ __('messages.content_fr') }}</label>
-                <textarea class="form-control" name="content_fr" rows="5">{{ old('content_fr') }}</textarea>
-            </div>
-
-            <div class="mb-3">
-                <label class="form-label">{{ __('messages.content_en') }}</label>
-                <textarea class="form-control" name="content_en" rows="5">{{ old('content_en') }}</textarea>
+                <label class="form-label">{{ __('messages.document') }}</label>
+                <input type="file" class="form-control" name="document">
             </div>
 
             <button type="submit" class="btn btn-primary">{{ __('messages.save') }}</button>
-            <a href="{{ route('articles.index') }}" class="btn btn-secondary">{{ __('messages.cancel') }}</a>
+            <a href="{{ route('documents.index') }}" class="btn btn-secondary">{{ __('messages.cancel') }}</a>
         </form>
     </div>
 </div>

@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('titre', __('messages.new_article'))
+
 @section('contenu')
 <div class="card">
     <div class="card-header">

@@ -1,54 +1,47 @@
-# Git Hub
-https://github.com/DavidJ97/Maisonneuve1491175.git
+TP2 Laravel - Gestionnaire de tâches
+Description
+Application web Laravel de gestion des tâches avec multi-langues, authentification, catégorisation et génération de PDF développée dans le cadre du cours de Laravel au Collège Maisonneuve.
+Installation
 
-# Projet Web - Gestion des étudiants du Collège Maisonneuve
-
-## Description
-Application Web permettant la gestion des étudiants et de leurs informations.
-
-## Installation
-1. Cloner le projet
-2. Installer les dépendances : `composer install`
-3. Copier .env.example vers .env
-4. Configurer la base de données dans .env
-5. Générer la clé d'application : `php artisan key:generate`
-6. Exécuter les migrations : `php artisan migrate`
-7. Alimenter la base de données : `php artisan db:seed`
-
-# Création du projet et configuration
-composer create-project --prefer-dist laravel/laravel Maisonneuve1491175
+git clone https://github.com/DavidJ97/Maisonneuve1491175.git
 cd Maisonneuve1491175
-
-# Création des modèles et migrations
-php artisan make:model Etudiant -m
-php artisan make:model Ville -m
-
-# Création des factories
-php artisan make:factory VilleFactory
-php artisan make:factory EtudiantFactory
-
-# Création des contrôleurs
-php artisan make:controller EtudiantController --resource
-php artisan make:controller VilleController --resource
-
-# Commandes de base de données
+composer install
+Copier .env.example vers .env
+Configurer base de données MySQL dans .env :
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel_todo
+DB_USERNAME=root
+DB_PASSWORD=
+php artisan key:generate
 php artisan migrate
 php artisan db:seed
-php artisan migrate:fresh --seed
 
-# Commandes utilitaires
-php artisan serve
-php artisan route:list
-php artisan cache:clear
-php artisan view:clear
-php artisan config:clear
+Fonctionnalités
 
-# Commandes Git
-git init
-git add .
-git commit -m "Initial commit - Projet Maisonneuve1491175"
-git branch -M main
-git remote add origin https://github.com/DavidJ97/Maisonneuve1491175.git
-git push -u origin main
+Authentification (login, register, reset password)
+CRUD complet des tâches
+Catégories de tâches
+Interface français/anglais
+Export PDF des tâches avec QR code
+Rôles et permissions (admin/employé)
 
-Auteur : David Jules
+Technologies
+
+Laravel
+MySQL (InnoDB)
+Bootstrap 5
+DomPDF
+Spatie Laravel Permission
+Simple QR Code
+
+Structure BD
+
+Table tasks (id, title, description, completed, due_date, user_id, category_id)
+Table categories (id, category)
+Table users (id, name, email, password, role_id)
+
+Auteur
+David Jules
+

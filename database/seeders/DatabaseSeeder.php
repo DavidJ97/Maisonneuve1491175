@@ -1,5 +1,4 @@
 <?php
-
 namespace Database\Seeders;
 
 use App\Models\Ville;
@@ -10,15 +9,12 @@ class DatabaseSeeder extends Seeder
 {
     public function run()
     {
-        // Créer 15 villes
+        // Créer 15 villes d'abord
         Ville::factory(15)->create();
         
-        // Créer 100 étudiants
-        Etudiant::factory(100)->create();
-
-        // $this->call(UserSeeder::class);
-        $this->call(VilleSeeder::class);
-
+        // Créer 100 étudiants avec leurs users associés
+        Etudiant::factory(100)
+            ->create();
 
     }
 }

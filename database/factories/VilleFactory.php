@@ -1,5 +1,4 @@
 <?php
-
 namespace Database\Factories;
 
 use App\Models\Ville;
@@ -12,7 +11,7 @@ class VilleFactory extends Factory
     public function definition()
     {
         return [
-            'nom' => $this->faker->city,
+            'nom' => $this->faker->city
         ];
     }
 }
